@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: hellok8s
-        image: docker.io/rlkamradt/hellok8s:latest
+        image: docker.io/linarnadyrov/hellok8s:latest
         ports:
         - containerPort: 8080
 ---
