@@ -35,3 +35,6 @@ curl http://192.168.33.150/hello
 Hello World
 ```
 
+##### Общая схема полученного результата
+
+<img src="./images/k1s.jpg" alt="k1s"/>
