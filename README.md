@@ -22,11 +22,20 @@ kubectl apply -f deploy.yaml
 ```
 Оригинальный [deploy](https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/provider/baremetal/deploy.yaml)
 
-##### Установка приложения, сервиса и ингресса для данного приложения
+##### Установка приложения, сервиса и ингресса
 ```
-kubectl apply -f simple-service.yaml
-kubectl apply -f simple-ingress.yaml
+kubectl apply -f hello_manifest/simple-service.yaml
+kubectl apply -f hello_manifest/simple-ingress.yaml
+
+or (лучше устанавливать с помощью helm)
+helm upgrade --install hello hello --namespace default
 ```
+##### Преимущества helm
+```
+helm list -a -A
+helm delete hello -n default
+```
+
 ##### Проверка 
 ```
 curl http://192.168.33.150/hello

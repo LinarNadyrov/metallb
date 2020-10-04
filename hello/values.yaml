@@ -1,0 +1,20 @@
+deployments:
+    replicas: 1
+    image:
+      repository: linarnadyrov/hellok8s
+      tag: latest
+    port: 8080
+
+service:
+    serviceName: hellok8s-service
+    type: ClusterIP
+    port: 8080
+    targetPort: 8080
+
+ingress:
+    path: /hello
+    serviceName: hellok8s-service
+    servicePort: 8080
+
+# Переменные специально вынесены для каждого kind. 
+# Можно объединить 8080, hellok8s-service
